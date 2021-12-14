@@ -5,12 +5,12 @@ import info.petrsabata.advent2021.Day12.CaveMap
 
 fun main() {
 
-    val inputTest: List<String> = InputHelper("day12.txt").readLines()
+    val inputTest: List<String> = InputHelper("day12-test.txt").readLines()
     val input: List<String> = InputHelper("day12.txt").readLines()
 
     val caveMapTest = CaveMap(inputTest)
-    assert(caveMapTest.trace(false) == 10)
-    assert(caveMapTest.trace(true) == 36)
+    check(caveMapTest.trace(false) == 10)
+    check(caveMapTest.trace(true) == 36)
 
     val caveMap = CaveMap(input)
     println("There are ${caveMap.trace(false)} different cave paths.")
